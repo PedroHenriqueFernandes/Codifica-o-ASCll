@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ag 05 Pedro Henrique Fernandes</title>
+    <style>
+        body {
+            background-color: rgb(248, 248, 248);
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        let palavraDigitada;
+        palavraDigitada = prompt('Digite a senha a ser criptografada: ');
+
+        let array = [];
+        let array2 = [], decimal = [], soma = [], criptografada = ''
+        array = palavraDigitada.split('');
+        
+        for (i = 0; i < palavraDigitada.length; i++) {
+            array2[i] = array[i];
+            let char = array[i].charCodeAt(0);
+            decimal[i] = array[i].charCodeAt(0);
+            soma[i] = decimal[i] + 10;
+            let char2 = String.fromCharCode(char + 10);
+            criptografada += char2
+        }
+        //Array
+        document.write('Separação de caracteres da String de entrada em um vetor de caracteres: <br>')
+        for(i = 0; i < palavraDigitada.length; i++){
+            document.write(`${array2[i]}`);
+        }
+        document.write('<br>')
+
+        //decimal
+        document.write('Conversão dos caracteres para decimal (ascii): <br>')
+        for(i = 0; i < palavraDigitada.length; i++){
+            document.write(`${decimal[i]} `);
+        }
+        document.write('<br>')
+
+        //soma
+        document.write('Soma 10 unidades (criptografia): <br>')
+        for(i = 0; i < palavraDigitada.length; i++){
+            document.write(`${soma[i]} `);
+        }
+        document.write('<br>')
+
+        //final
+        document.write('Saída da String final criptografada: <br>')
+        document.write(criptografada);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
